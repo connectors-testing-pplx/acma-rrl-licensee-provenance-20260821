@@ -1,0 +1,48 @@
+ACMA REGISTER OF RADIOCOMMUNICATIONS LICENCES (RRL) - LICENCE PRESENCE ROW ARTIFACT
+======================================================================================
+
+Official source dataset: Australian Communications and Media Authority (ACMA)
+  Register of Radiocommunications Licences (RRL) - complete dataset download
+  Official ACMA download URL: https://web.acma.gov.au/rrl-updates/spectra_rrl.zip
+  Official ACMA download page: https://www.acma.gov.au/radiocomms-licence-data
+Data vintage: complete daily RRL extract of 21 August 2026
+  (files inside spectra_rrl.zip timestamped 2026-08-21)
+
+Service bucket: spectrum_public_network  [Spectrum licence (public network / wide-area spectrum)]
+
+CLIENT (LICENSEE) RECORD
+--------------------------------------------------------------------------------------
+Locator: file client.csv inside spectra_rrl.zip, row with CLIENT_NO = 20039914
+  LICENCEE (client name): PENTANET PTY LTD
+  TRADING_NAME: PENTANET PTY LTD
+  ABN: 29617506279
+  ACN: 617506279
+  CLIENT_TYPE_ID: 5 = "Company" (per client_type.csv lookup table;
+    this is an organisational client type, NOT CLIENT_TYPE_ID 7 = "Person")
+
+LICENCE RECORD
+--------------------------------------------------------------------------------------
+Locator: file licence.csv inside spectra_rrl.zip, row with LICENCE_NO = 11275968
+  LICENCE_NO: 11275968
+  CLIENT_NO: 20039914 (links to client.csv row above)
+  LICENCE_TYPE_NAME: Spectrum
+  LICENCE_CATEGORY_NAME: 26 GHz Band
+  STATUS: 1 / STATUS_TEXT: Granted
+  DATE_ISSUED: 2021-06-23
+  DATE_OF_EFFECT: 2021-07-15
+  DATE_OF_EXPIRY: 2036-07-14
+
+This licensee holds 2 licence(s) of LICENCE_TYPE_NAME "Spectrum" with STATUS_TEXT
+"Granted" in this RRL extract; the licence above is one representative row.
+
+VERBATIM RAW CSV ROWS (from the 21 August 2026 RRL extract)
+--------------------------------------------------------------------------------------
+client.csv header:
+CLIENT_NO,LICENCEE,TRADING_NAME,ACN,ABN,POSTAL_STREET,POSTAL_SUBURB,POSTAL_STATE,POSTAL_POSTCODE,CAT_ID,CLIENT_TYPE_ID,FEE_STATUS_ID
+client.csv row (CLIENT_NO=20039914):
+20039914,PENTANET PTY LTD,PENTANET PTY LTD,617506279,29617506279,2/8 Corbusier Place,BALCATTA,WA,6021,6,5,1
+
+licence.csv header:
+LICENCE_NO,CLIENT_NO,SV_ID,SS_ID,LICENCE_TYPE_NAME,LICENCE_CATEGORY_NAME,DATE_ISSUED,DATE_OF_EFFECT,DATE_OF_EXPIRY,STATUS,STATUS_TEXT,AP_ID,AP_PRJ_IDENT,SHIP_NAME,BSL_NO,AWL_TYPE
+licence.csv row (LICENCE_NO=11275968):
+11275968,20039914,85,866,Spectrum,26 GHz Band,2021-06-23,2021-07-15,2036-07-14,1,Granted,,,,,
