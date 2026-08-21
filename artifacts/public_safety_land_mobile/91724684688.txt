@@ -1,0 +1,48 @@
+ACMA REGISTER OF RADIOCOMMUNICATIONS LICENCES (RRL) - LICENCE PRESENCE ROW ARTIFACT
+======================================================================================
+
+Official source dataset: Australian Communications and Media Authority (ACMA)
+  Register of Radiocommunications Licences (RRL) - complete dataset download
+  Official ACMA download URL: https://web.acma.gov.au/rrl-updates/spectra_rrl.zip
+  Official ACMA download page: https://www.acma.gov.au/radiocomms-licence-data
+Data vintage: complete daily RRL extract of 21 August 2026
+  (files inside spectra_rrl.zip timestamped 2026-08-21)
+
+Service bucket: public_safety_land_mobile  [Land mobile (public safety / operational)]
+
+CLIENT (LICENSEE) RECORD
+--------------------------------------------------------------------------------------
+Locator: file client.csv inside spectra_rrl.zip, row with CLIENT_NO = 203860
+  LICENCEE (client name): WESTERN AUSTRALIA POLICE
+  TRADING_NAME: CCTR:381350 - Radio & Electronic Services Unit
+  ABN: 91724684688
+  ACN: (blank)
+  CLIENT_TYPE_ID: 3 = "State Government" (per client_type.csv lookup table;
+    this is an organisational client type, NOT CLIENT_TYPE_ID 7 = "Person")
+
+LICENCE RECORD
+--------------------------------------------------------------------------------------
+Locator: file licence.csv inside spectra_rrl.zip, row with LICENCE_NO = 10069961/1
+  LICENCE_NO: 10069961/1
+  CLIENT_NO: 203860 (links to client.csv row above)
+  LICENCE_TYPE_NAME: Land Mobile
+  LICENCE_CATEGORY_NAME: Land Mobile System - > 30MHz
+  STATUS: 1 / STATUS_TEXT: Granted
+  DATE_ISSUED: 2026-06-09
+  DATE_OF_EFFECT: 2026-06-09
+  DATE_OF_EXPIRY: 2027-05-31
+
+This licensee holds 1259 licence(s) of LICENCE_TYPE_NAME "Land Mobile" with STATUS_TEXT
+"Granted" in this RRL extract; the licence above is one representative row.
+
+VERBATIM RAW CSV ROWS (from the 21 August 2026 RRL extract)
+--------------------------------------------------------------------------------------
+client.csv header:
+CLIENT_NO,LICENCEE,TRADING_NAME,ACN,ABN,POSTAL_STREET,POSTAL_SUBURB,POSTAL_STATE,POSTAL_POSTCODE,CAT_ID,CLIENT_TYPE_ID,FEE_STATUS_ID
+client.csv row (CLIENT_NO=203860):
+203860,WESTERN AUSTRALIA POLICE,CCTR:381350 - Radio & Electronic Services Unit,,91724684688,21 Swanbank Road Att: Phillip Manna,MAYLANDS,WA,6051,10,3,1
+
+licence.csv header:
+LICENCE_NO,CLIENT_NO,SV_ID,SS_ID,LICENCE_TYPE_NAME,LICENCE_CATEGORY_NAME,DATE_ISSUED,DATE_OF_EFFECT,DATE_OF_EXPIRY,STATUS,STATUS_TEXT,AP_ID,AP_PRJ_IDENT,SHIP_NAME,BSL_NO,AWL_TYPE
+licence.csv row (LICENCE_NO=10069961/1):
+10069961/1,203860,3,304,Land Mobile,Land Mobile System - > 30MHz,2026-06-09,2026-06-09,2027-05-31,1,Granted,10070154,20006604_WAPOL_10_7xML,,,
