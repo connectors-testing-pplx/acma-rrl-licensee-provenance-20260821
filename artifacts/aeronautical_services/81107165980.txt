@@ -1,0 +1,48 @@
+ACMA REGISTER OF RADIOCOMMUNICATIONS LICENCES (RRL) - LICENCE PRESENCE ROW ARTIFACT
+======================================================================================
+
+Official source dataset: Australian Communications and Media Authority (ACMA)
+  Register of Radiocommunications Licences (RRL) - complete dataset download
+  Official ACMA download URL: https://web.acma.gov.au/rrl-updates/spectra_rrl.zip
+  Official ACMA download page: https://www.acma.gov.au/radiocomms-licence-data
+Data vintage: complete daily RRL extract of 21 August 2026
+  (files inside spectra_rrl.zip timestamped 2026-08-21)
+
+Service bucket: aeronautical_services  [Aeronautical services]
+
+CLIENT (LICENSEE) RECORD
+--------------------------------------------------------------------------------------
+Locator: file client.csv inside spectra_rrl.zip, row with CLIENT_NO = 1142881
+  LICENCEE (client name): Alliance Airlines Pty Limited
+  TRADING_NAME: Alliance Airlines
+  ABN: 81107165980
+  ACN: 107165980
+  CLIENT_TYPE_ID: 5 = "Company" (per client_type.csv lookup table;
+    this is an organisational client type, NOT CLIENT_TYPE_ID 7 = "Person")
+
+LICENCE RECORD
+--------------------------------------------------------------------------------------
+Locator: file licence.csv inside spectra_rrl.zip, row with LICENCE_NO = 10261761/1
+  LICENCE_NO: 10261761/1
+  CLIENT_NO: 1142881 (links to client.csv row above)
+  LICENCE_TYPE_NAME: Aeronautical
+  LICENCE_CATEGORY_NAME: Aeronautical Assigned System
+  STATUS: 1 / STATUS_TEXT: Granted
+  DATE_ISSUED: 2026-07-20
+  DATE_OF_EFFECT: 2026-07-20
+  DATE_OF_EXPIRY: 2027-07-02
+
+This licensee holds 10 licence(s) of LICENCE_TYPE_NAME "Aeronautical" with STATUS_TEXT
+"Granted" in this RRL extract; the licence above is one representative row.
+
+VERBATIM RAW CSV ROWS (from the 21 August 2026 RRL extract)
+--------------------------------------------------------------------------------------
+client.csv header:
+CLIENT_NO,LICENCEE,TRADING_NAME,ACN,ABN,POSTAL_STREET,POSTAL_SUBURB,POSTAL_STATE,POSTAL_POSTCODE,CAT_ID,CLIENT_TYPE_ID,FEE_STATUS_ID
+client.csv row (CLIENT_NO=1142881):
+1142881,Alliance Airlines Pty Limited,Alliance Airlines,107165980,81107165980,PO Box 1126,EAGLE FARM,QLD,4009,7,5,1
+
+licence.csv header:
+LICENCE_NO,CLIENT_NO,SV_ID,SS_ID,LICENCE_TYPE_NAME,LICENCE_CATEGORY_NAME,DATE_ISSUED,DATE_OF_EFFECT,DATE_OF_EXPIRY,STATUS,STATUS_TEXT,AP_ID,AP_PRJ_IDENT,SHIP_NAME,BSL_NO,AWL_TYPE
+licence.csv row (LICENCE_NO=10261761/1):
+10261761/1,1142881,8,800,Aeronautical,Aeronautical Assigned System,2026-07-20,2026-07-20,2027-07-02,1,Granted,10262120,1144246_ALLIANCE_129_75,,,

@@ -1,0 +1,48 @@
+ACMA REGISTER OF RADIOCOMMUNICATIONS LICENCES (RRL) - LICENCE PRESENCE ROW ARTIFACT
+======================================================================================
+
+Official source dataset: Australian Communications and Media Authority (ACMA)
+  Register of Radiocommunications Licences (RRL) - complete dataset download
+  Official ACMA download URL: https://web.acma.gov.au/rrl-updates/spectra_rrl.zip
+  Official ACMA download page: https://www.acma.gov.au/radiocomms-licence-data
+Data vintage: complete daily RRL extract of 21 August 2026
+  (files inside spectra_rrl.zip timestamped 2026-08-21)
+
+Service bucket: aeronautical_services  [Aeronautical services]
+
+CLIENT (LICENSEE) RECORD
+--------------------------------------------------------------------------------------
+Locator: file client.csv inside spectra_rrl.zip, row with CLIENT_NO = 6817
+  LICENCEE (client name): CATHAY PACIFIC AIRWAYS LIMITED
+  TRADING_NAME: Cathay Pacific Airways Ltd
+  ABN: 57000479514
+  ACN: 000479514
+  CLIENT_TYPE_ID: 5 = "Company" (per client_type.csv lookup table;
+    this is an organisational client type, NOT CLIENT_TYPE_ID 7 = "Person")
+
+LICENCE RECORD
+--------------------------------------------------------------------------------------
+Locator: file licence.csv inside spectra_rrl.zip, row with LICENCE_NO = 1130271/1
+  LICENCE_NO: 1130271/1
+  CLIENT_NO: 6817 (links to client.csv row above)
+  LICENCE_TYPE_NAME: Aeronautical
+  LICENCE_CATEGORY_NAME: Aeronautical Assigned System
+  STATUS: 1 / STATUS_TEXT: Granted
+  DATE_ISSUED: 2025-11-10
+  DATE_OF_EFFECT: 2025-11-10
+  DATE_OF_EXPIRY: 2026-11-05
+
+This licensee holds 4 licence(s) of LICENCE_TYPE_NAME "Aeronautical" with STATUS_TEXT
+"Granted" in this RRL extract; the licence above is one representative row.
+
+VERBATIM RAW CSV ROWS (from the 21 August 2026 RRL extract)
+--------------------------------------------------------------------------------------
+client.csv header:
+CLIENT_NO,LICENCEE,TRADING_NAME,ACN,ABN,POSTAL_STREET,POSTAL_SUBURB,POSTAL_STATE,POSTAL_POSTCODE,CAT_ID,CLIENT_TYPE_ID,FEE_STATUS_ID
+client.csv row (CLIENT_NO=6817):
+6817,CATHAY PACIFIC AIRWAYS LIMITED,Cathay Pacific Airways Ltd,000479514,57000479514,PO Box 4996 (Attn Peter Dooley Eng Dept),SYDNEY,NSW,2001,15,5,1
+
+licence.csv header:
+LICENCE_NO,CLIENT_NO,SV_ID,SS_ID,LICENCE_TYPE_NAME,LICENCE_CATEGORY_NAME,DATE_ISSUED,DATE_OF_EFFECT,DATE_OF_EXPIRY,STATUS,STATUS_TEXT,AP_ID,AP_PRJ_IDENT,SHIP_NAME,BSL_NO,AWL_TYPE
+licence.csv row (LICENCE_NO=1130271/1):
+1130271/1,6817,8,800,Aeronautical,Aeronautical Assigned System,2025-11-10,2025-11-10,2026-11-05,1,Granted,9759697,,,,
